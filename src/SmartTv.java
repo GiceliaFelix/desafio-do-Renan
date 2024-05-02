@@ -1,34 +1,54 @@
  public class SmartTv {
-    boolean ligada=false;
-    int canal = 1;
-    int volume = 25;
+    boolean ligada= true;
+    int canal = 13;
+    int volume = 6;
 
-    public void mudarCanal (int novoCanal){
-        canal = novoCanal;
-    }
+     public void ligar(){
+         ligada= false;
+     }
+
+     public void desligar() {
+         ligada = false;
+     }
 
     public void aumentarCanal (){
-        canal++;
+        if (ligada)
+        { volume++;
+            System.out.println("Aumentando o canal para: " + volume);
+        }
+        else {
+            System.out.println("TV desligada. Não foi possível aumentar o canal.");
+        }
     }
 
      public void diminuirCanal (){
-         canal--;
+         if (ligada)
+         { volume++;
+             System.out.println("Aumentando o canal para: " + volume);
+         }
+         else {
+             System.out.println("TV desligada. Não foi possível diminuir o canal.");
+         }
      }
-
 
     public void aumentarVolume (){
-        volume++;
-        System.out.println("Aumentando o volume para: " + volume);
+        if (ligada)
+        { volume++;
+               System.out.println("Aumentando o volume para: " + volume);
+        }
+        else {
+               System.out.println("TV desligada. Não foi possível aumentar o volume.");
+        }
     }
+
      public void diminuirVolume (){
-         volume--;
-        System.out.println("Diminuindo o volume para: " + volume);
+        if (ligada)
+        { volume--;
+              System.out.println("Diminuindo o volume para: " + volume);}
+        else {
+             System.out.println("TV desligada. Não foi possível diminuir o volume.");
+         }
 
      }
-    public void ligar(){
-        ligada=true;
-    }
-     public void desligar(){
-         ligada=false;
-     }
+
  }
